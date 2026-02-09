@@ -14,23 +14,23 @@ This project demonstrates the detection, investigation, and response to an SSH b
 An external attacker attempted multiple SSH login attempts using invalid credentials against a Linux host, triggering security alerts in Elastic SIEM.
 
 ## Detection & Alerting
--Alert Name: SSH Brute Force Attempt
--Severity: Medium
--Host: ubuntuopenfhe
--Event Type: Multiple failed SSH login attempts
--Framework: MITRE ATT&CK
--Tactic: Credential Access
--Technique: Brute Force
--Sub-technique: Password Guessing (T1110)
+- Alert Name: SSH Brute Force Attempt
+- Severity: Medium
+- Host: ubuntuopenfhe
+- Event Type: Multiple failed SSH login attempts
+- Framework: MITRE ATT&CK
+- Tactic: Credential Access
+- Technique: Brute Force
+- Sub-technique: Password Guessing (T1110)
 
 ## Investigation Process
-Multiple failed SSH authentication attempts observed
-No successful login detected
-No privilege escalation activity observed
-Attack classified as attempted intrusion, not a successful breach
+- Multiple failed SSH authentication attempts observed
+- No successful login detected
+- No privilege escalation activity observed
+- Attack classified as attempted intrusion, not a successful breach
 
 ## MITRE ATT&CK Mapping
-Tactic:Credential Access
+- Tactic:Credential Access
 - Technique:Brute Force
 - Sub-technique:Password Guessing
 - Technique id:110
@@ -42,23 +42,22 @@ Tactic:Credential Access
 - Impact Level:Medium to High
 
 ## Response & Mitigation
--Block attacker IP using firewall (UFW / iptables)
--Enable SSH rate-limiting
--Enforce strong password policies
--Use SSH key-based authentication
--Monitor IP reputation via threat intelligence
--Configure alert escalation for repeated attempts
+- Block attacker IP using firewall (UFW / iptables)
+- Enable SSH rate-limiting
+- Enforce strong password policies
+- Use SSH key-based authentication
+- Monitor IP reputation via threat intelligence
+- Configure alert escalation for repeated attempts
 ## Lessons Learned
-Importance of centralized log monitoring
-Early detection prevents successful compromise
-SIEM alerts must be correlated with log evidence
-MITRE mapping helps standardize incident analysis
-Documentation is critical for SOC operation
+- Importance of centralized log monitoring
+- Early detection prevents successful compromise
+- SIEM alerts must be correlated with log evidence
+- MITRE mapping helps standardize incident analysis
 ## Future Enhancements
-Automate IP blocking via SOAR playbooks
-Add geo-location analysis of attacker IPs
-Integrate threat intelligence feeds
-Expand detection to other attack techniques (Privilege Escalation, Persistence)
+- Automate IP blocking via SOAR playbooks
+- Add geo-location analysis of attacker IPs
+- Integrate threat intelligence feeds
+- Expand detection to other attack techniques (Privilege Escalation, Persistence)
 ## Conclusion and Author
 This project simulates real world SOC Level 1 activities including monitoring, alert triage, investigation, and security recommendations.
 **Sarath Pulicherla
