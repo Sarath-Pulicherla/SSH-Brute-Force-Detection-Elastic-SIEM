@@ -1,115 +1,132 @@
 ##Incident Report – SSH Brute Force Attack
-#Incident Summary
+##Incident Summary
 
 On 12 Jan 2026 , multiple failed SSH authentication attempts were detected against a Linux host (ubuntuopenfhe). The activity was identified by Elastic SIEM and classified as an SSH Brute Force attack aligned with the MITRE ATT&CK framework.
 
-#Detection Source
+##Detection Source
 
-Platform: Elastic Security (SIEM)
+- Platform: Elastic Security (SIEM)
 
-Data Source: Linux system authentication logs (journald)
+- Data Source: Linux system authentication logs (journald)
 
-Rule Triggered: SSH Brute Force – Multiple Failed Login Attempts
+- Rule Triggered: SSH Brute Force – Multiple Failed Login Attempts
 
-Severity: Medium
+- Severity: Medium
 
-Tactic: Credential Access
+- Tactic: Credential Access
 
-Technique: Brute Force (T1110)
+- Technique: Brute Force (T1110)
 
-Sub-technique: Password Guessing
+- Sub-technique: Password Guessing
 
-#Timeline of Events
+##Timeline of Events
 
-Multiple failed SSH login attempts observed within a short time window
+- Multiple failed SSH login attempts observed within a short time window
 
-Alerts generated automatically by Elastic prebuilt detection rules
+- Alerts generated automatically by Elastic prebuilt detection rules
 
-No successful authentication detected following the failed attempts
+- No successful authentication detected following the failed attempts
 
-#Findings
+##Findings
 
-Successful Login:
+- Successful Login:
  No successful SSH login detected
 
-Privilege Escalation:
+- Privilege Escalation:
  No privilege escalation activity observed
 
-Source IP:
+- Source IP:
  Source IP was not consistently captured in the alert metadata
 
-User Accounts Targeted:
+- User Accounts Targeted:
 Local Linux user accounts via SSH
 
-#Impact Assessment
+##Impact Assessment
 
-No unauthorized access gained
+- No unauthorized access gained
 
-No system or data integrity compromised
+- No system or data integrity compromised
 
-Attack remained at the attempt phase
+- Attack remained at the attempt phase
 
-Risk classified as Moderate, due to repeated credential guessing behavior
+- Risk classified as Moderate, due to repeated credential guessing behavior
 
-#Investigation Performed
+##Investigation Performed
 
-Reviewed Elastic Security alerts and event details
+- Reviewed Elastic Security alerts and event details
 
-Analyzed raw authentication logs in JSON format
+- Analyzed raw authentication logs in JSON format
 
-Correlated failed login attempts with host activity
+- Correlated failed login attempts with host activity
 
-Verified absence of post-authentication actions
+- Verified absence of post-authentication actions
 
-#Mitigation & Recommendations
+##Mitigation & Recommendations
 
-Enforce strong password policies
+- Enforce strong password policies
 
-Implement SSH key-based authentication
+- Implement SSH key-based authentication
 
-Limit SSH access using firewall rules
+- Limit SSH access using firewall rules
 
-Enable IP reputation and threat intelligence feeds
+- Enable IP reputation and threat intelligence feeds
 
-Configure alert escalation for repeated attempts
+- Configure alert escalation for repeated attempts
 
-Consider blocking offending IPs automatically
+- Consider blocking offending IPs automatically
 
-#Lessons Learned
+##Lessons Learned
 
-Early detection prevented unauthorized access
+- Early detection prevented unauthorized access
 
-SIEM visibility is critical for brute force detection
+- SIEM visibility is critical for brute force detection
 
-Automated alerting reduces response time
+- Automated alerting reduces response time
 
-Logging completeness (IP capture) should be improved
+- Logging completeness (IP capture) should be improved
 
-#Status
+##Status
 
- Incident contained
- No further action required
- Monitoring continues
+ - Incident contained
+ - No further action required
+ - Monitoring continues
 
-#Analyst
+##Analyst
 
 Sarath Pulicherla
 SOC / Cybersecurity Analyst (Hands-on Project)
 
-#Tools Used
+##Tools Used
 
-Elastic SIEM
+- Elastic SIEM
 
-Elastic Agent
+- Elastic Agent
 
-Linux (Ubuntu)
+- Linux (Ubuntu)
 
-MITRE ATT&CK Framework
+- MITRE ATT&CK Framework
 
-#Evidence
+##Evidence
 
-Elastic Security alerts
+- Elastic Security alerts
 
-Authentication log entries (JSON)
+- Authentication log entries (JSON)
 
-Detection rule metadata
+- Detection rule metadata
+
+## Incident Overview
+Short summary:
+
+- SSH brute force detected
+
+- Multiple authentication failures
+
+- Alert triggered in Elastic Security
+
+## Evidence collection( Log Analysis)
+![Authentication Failures](screenshots/01-Discover authentication failures.jpeg)
+
+![SSH Brute Force Alert](screenshots/02-Alert ssh brute force detected.jpeg)
+
+![SSH Login Attempts Dashboard](screenshots/03-Dashboard ssh login attempts.jpeg)
+
