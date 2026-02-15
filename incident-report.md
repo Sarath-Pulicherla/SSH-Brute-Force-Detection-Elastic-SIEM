@@ -1,9 +1,9 @@
-##Incident Report – SSH Brute Force Attack
-##Incident Summary
+## Incident Report – SSH Brute Force Attack
+## Incident Summary
 
 On 12 Jan 2026 , multiple failed SSH authentication attempts were detected against a Linux host (ubuntuopenfhe). The activity was identified by Elastic SIEM and classified as an SSH Brute Force attack aligned with the MITRE ATT&CK framework.
 
-##Detection Source
+## Detection Source
 
 - Platform: Elastic Security (SIEM)
 
@@ -19,7 +19,7 @@ On 12 Jan 2026 , multiple failed SSH authentication attempts were detected again
 
 - Sub-technique: Password Guessing
 
-##Timeline of Events
+## Timeline of Events
 
 - Multiple failed SSH login attempts observed within a short time window
 
@@ -27,7 +27,7 @@ On 12 Jan 2026 , multiple failed SSH authentication attempts were detected again
 
 - No successful authentication detected following the failed attempts
 
-##Findings
+## Findings
 
 - Successful Login:
  No successful SSH login detected
@@ -41,7 +41,7 @@ On 12 Jan 2026 , multiple failed SSH authentication attempts were detected again
 - User Accounts Targeted:
 Local Linux user accounts via SSH
 
-##Impact Assessment
+## Impact Assessment
 
 - No unauthorized access gained
 
@@ -51,7 +51,7 @@ Local Linux user accounts via SSH
 
 - Risk classified as Moderate, due to repeated credential guessing behavior
 
-##Investigation Performed
+## Investigation Performed
 
 - Reviewed Elastic Security alerts and event details
 
@@ -61,7 +61,7 @@ Local Linux user accounts via SSH
 
 - Verified absence of post-authentication actions
 
-##Mitigation & Recommendations
+## Mitigation & Recommendations
 
 - Enforce strong password policies
 
@@ -75,7 +75,7 @@ Local Linux user accounts via SSH
 
 - Consider blocking offending IPs automatically
 
-##Lessons Learned
+## Lessons Learned
 
 - Early detection prevented unauthorized access
 
@@ -85,18 +85,18 @@ Local Linux user accounts via SSH
 
 - Logging completeness (IP capture) should be improved
 
-##Status
+## Status
 
  - Incident contained
  - No further action required
  - Monitoring continues
 
-##Analyst
+## Analyst
 
 Sarath Pulicherla
 SOC / Cybersecurity Analyst (Hands-on Project)
 
-##Tools Used
+## Tools Used
 
 - Elastic SIEM
 
@@ -106,7 +106,7 @@ SOC / Cybersecurity Analyst (Hands-on Project)
 
 - MITRE ATT&CK Framework
 
-##Evidence
+## Evidence
 
 - Elastic Security alerts
 
