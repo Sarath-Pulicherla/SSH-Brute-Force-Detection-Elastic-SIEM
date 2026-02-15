@@ -1,4 +1,4 @@
-## Incident Report – SSH Brute Force Attack
+# Incident Report – SSH Brute Force Attack
 ## Incident Summary
 
 On 12 Jan 2026 , multiple failed SSH authentication attempts were detected against a Linux host (ubuntuopenfhe). The activity was identified by Elastic SIEM and classified as an SSH Brute Force attack aligned with the MITRE ATT&CK framework.
